@@ -5,9 +5,12 @@ This custom map style for the Hammerhead Karoo improves clarity, visibility, and
 
 ## Usage
 
-1. Copy the `icons-dan` folder and the `offline_v14.xml` file to the root directory of your Karoo device.
-2. Reopen the map view.
-3. Enjoy. 
+1. Connect via USB.
+2. [Enable Developer Options](https://support.hammerhead.io/hc/en-us/articles/30696553134363-Karoo-Enabling-Developer-Options)
+3. Enable File Transfer under Settings -> Developer Options -> Default USB Configuration -> File Transfer.
+4. Copy the `icons-dan` folder and the `offline_v14.xml` file to the root directory of your Karoo device.
+5. Reopen the map view.
+6. Enjoy. 
 
 > [!TIP]
 > Some Karoo software updates may require a different filename for the style XML file.  
