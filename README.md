@@ -71,3 +71,6 @@ This custom map style for the Hammerhead Karoo improves clarity, visibility, and
 - Hospitals are now properly shown on the map – helpful in emergencies.
 
 <img width="1000" height="800" alt="Hospital" src="https://github.com/user-attachments/assets/de25cd99-7e67-469e-9fb8-b8c057e7aee8" />
+
+## Inspiration
+- [www.openandromaps.org](https://www.openandromaps.org/)
