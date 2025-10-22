@@ -24,7 +24,7 @@ This custom map style for the Hammerhead Karoo improves clarity, visibility, and
 ### More Visible Settlements
 - Smaller towns and villages are now more prominently displayed, improving overview at lower zoom levels.
 
-<img width="1000" height="800" alt="CityName" src="https://github.com/user-attachments/assets/8f28daac-7637-46f8-95a1-cb38a38d4b1f" />
+<img width="800" height="640" alt="CityName" src="https://github.com/user-attachments/assets/8f28daac-7637-46f8-95a1-cb38a38d4b1f" />
 
 ### Enhanced Terrain Readability
 - Forests have been colored in a darker green tone to improve contrast with meadows and fields.
