@@ -30,11 +30,11 @@ This custom map style for the Hammerhead Karoo improves clarity, visibility, and
 - Smaller settlements no longer overwrite the name of the capital city.  
   **@Hammerhead Developers:** Please note, the higher the value of `priority`, the higher the display priority (priority 1 is the lowest).
 
-### Town Names Overwritten by Elevation Labels
+### 1. Town Names Overwritten by Elevation Labels
 - Elevation labels no longer replace town names.  
   **@Hammerhead Developers:** Again, higher `priority` = higher display priority.
 
-### Confusion Between Trails and Unpaved Roads
+### 1. Confusion Between Trails and Unpaved Roads
 - Trails and unpaved roads were previously hard to distinguish.
   - Unpaved roads are now shown as solid dark gray lines.
   - Trails are now all shown in the same color (**pink**), instead of mixed styles (brown-white, white dashed).
