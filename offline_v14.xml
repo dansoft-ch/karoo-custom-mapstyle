@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#dcd5d0"
+    version="1" xmlns="http://mapsforge.org/renderTheme"
+    xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+<!-- Dänu Style 20251002 -->
+<!-- Style an Swisstopo angepasst; Gondeln& Funiculaire ergänzt; Feldweg und Trail unterschieden; Höhenlinien in braun; Strand in Pfirsich -->
+<!-- MTB Trail in pink -->
+    <!-- AREA STYLES -->
+    <style-area fill="#6aabb8" id="water" mesh="true"/>
+
+    <!-- LINE CASINGS -->
+	<!-- "unpaved_casing" ist der Biketrail/ MTB; ehemals braun wiess Zebra #9e844c; Pink D300D3; Hier ist die Variable def.; Wird im Code verwendet -->
+    <!-- Der Zusammenhang zwischen "unpaved_casing" und "cycling_path" ist zu untersuchen. Diese überlagern sich bei Burgdorftrails, nicht jedoch beo Powermanhole-->
+	<!-- Kommt sehr selten vor. Z.B. in Burgdorf (gelb #FFE100) wird nicht mehr verwendet -->
+	<style-line id="unpaved_casing" stroke="#FFE100" cap="round" width="0.9"/>
+	<!-- dunkelgrün -->
+    <style-line id="paved_cycleway_casing" stroke="#327a04" cap="round"/>
+
+    <!-- LINE STYLES -->
+	<!-- Der "feldweg" & "MTB_Trail" sind von Dänu 20250906 -->
+    <style-line id="path" stroke="#4C4C4C" dasharray="6,6" cap="round" width="0.9"/>
+	<style-line id="feldweg" stroke="#4C4C4C" cap="round" width="0.9"/>
+	<!-- "mtb_trail" Pink, ist nun die Powermanhole --> 
+	<style-line id="mtb_trail" stroke="#D300D3" cap="round" width="1.6"/>
+	<!-- velo_weg, türkis-grün nirgends ersichtlich auf Karte; remarked -->
+	<style-line id="velo_weg" stroke="#1EFFAC" cap="round" width="1.5"/>
+	<!-- Türkis: 00FFFF -->
+	<!-- <style-line id="bycicle_unpaved" stroke="#00FFFF" cap="round" width="1.5"/> -->
+	<!-- "cycling_path" das ist auch die Powermanhole ; ist teilweise mit "unpaved_casing" doppelt gemoppelt; durch Daniel aufgelösst-->
+	<!-- Der Zusammenhang zwischen "unpaved_casing" und "cycling_path" ist zu untersuchen. Diese überlagern sich bei Burgdorftrails, nicht jedoch beo Powermanhole-->
+    <!-- "cycling_path" ist vielfach unnütz (Burgdorf), jedoch nicht bei Halde-Eiholz: wir darum dunkelgrün geführt (zum Test "#0CFF00") -->
+	<style-line id="cycling_path" stroke="#327a04"  cap="round" width="0.9"/>
+	<style-line id="cycling_path_1" stroke="#327a04"  cap="round" width="0.9"/>
+	<style-line id="cycling_path_2" stroke="#327a04" cap="round" width="0.9"/>
+    <style-line id="ferry" stroke="#6666FF" dasharray="8,8" cap="round" width="0.9"/>
+
+    <!-- Base style for fixed width lines -->
+    <style-line cap="butt" fix="true" id="fix" width="1.0"/>
+
+    <!-- Water line styles -->
+    <style-line cap="butt" id="water" stroke="#6aabb8" width="1.0"/>
+    <style-line fix="false" id="river" stroke="#6aabb8" use="water"/>
+
+    <!-- Text styles -->
+    <style-text id="poi_label" caption="true" dy="-15" fill="#2d51bc" font-family="thin"
+        k="name" size="11" stroke="#ffffff" stroke-width="2.0" style="bold" />
+
+    <!-- Road Labels - need to set priority and size where used, and override fill if needed -->
+    <style-text id="road_label" k="name" fill="#444444" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+
+    <!-- STYLE ASSIGNMENT RULES -->
+
+    <!-- Land vs. sea -->
+    <m e="way" k="natural" v="issea|sea">
+        <area use="water"/>
+    </m>
+    <m e="way" k="natural" v="nosea">
+        <area mesh="true" fill="#dcd5d0"/>
+    </m>
+
+    <!-- Closed ways (except highways and buildings --> 
+    <m closed="yes" e="way" k="highway|building" v="~">
+        <m k="landuse">
+			<!-- Dänu, grünton --> 
+            <m v="meadow">
+                <area mesh="true" fill="#bfe0ad"/>
+            </m>
+            <m v="residential">
+                <area mesh="true" fill="#c2c2bc"/>
+            </m>
+            <m v="allotments">
+                <area mesh="true" fill="#cfac7c"/>
+            </m>
+            <m v="commercial|retail">
+                <area mesh="true" fill="#d4d4d4"/>
+            </m>
+            <m v="farm|farmyard|farmland|orchard|vineyard">
+                <area mesh="true" fill="#a7c28f"/>
+            </m>
+            <m v="quarry">
+                <area mesh="true" fill="#b8b1ad"/>
+            </m>
+            <m v="industrial|railway">
+                <area mesh="true" fill="#d4c3d6"/>
+            </m>
+            <m v="cemetery">
+                <area mesh="true" fill="#bdc7b3"/>
+            </m>
+        </m>
+        <m k="amenity">
+            <m v="kindergarten|school|college|university">
+                <area mesh="true" fill="#c2c180"/>
+                <line cap="butt" fix="true" stroke="#9aabae" width="1.0"/>
+            </m>
+            <m v="hospital">
+                <area mesh="true" fill="#d9c7ab"/>
+            </m>
+        </m>
+        <m k="landuse">
+		<!-- Dänu, grünton --> 
+            <m v="recreation_ground">
+                <area mesh="true" fill="#9ac56e"/>
+            </m>
+            <m v="brownfield">
+                <area mesh="true" fill="#b9baad"/>
+            </m>
+        </m>
+        <m k="leisure" v="park|common|green|golf_course|pitch">
+		<!-- Dänu, grünton --> 
+            <area mesh="true" fill="#9ac56e"/>
+        </m>
+        <m k="natural">
+		<!-- Dänu, grünton --> 
+            <m k="natural" v="grassland|scrub">
+                <area mesh="true" fill="#8ed496"/>
+            </m>
+            <m v="sand|beach">
+                <area mesh="true" fill="#D3C274"/>
+            </m>
+			<!-- Rock und Glacier von Dänu abgeändert: aus Rock entfernt und eigenständig geführt in hellblau : trest rot vorher cccccc-->
+            <m v="rock|bare_rock|stone|scree|cliff|shingle">
+                <area mesh="true" fill="#cccccc"/>
+            </m>
+			<m e="way" k="natural" v="glacier|ice_shelf">
+                <area fill="#88F7F7"/>
+            </m>
+			<!-- Dänu, gelb-grünton zum testen: z.B. am Niederhorn gibt es nun gelbe Flächen--> 
+            <m k="natural" v="grassland|scrub|heath|fell|shrubbery|farmyard|farmland|meadow|orchard|allotments">
+                <area mesh="true" fill="#E0D88D"/>
+            </m>		
+        </m>
+
+        <m k="amenity" v="parking">
+            <area mesh="true" fill="#999999"/>
+        </m>
+
+        <m k="landuse|natural" v="forest|wood">
+            <area mesh="true" fill="#85AF77"/>
+        </m>
+
+        <!-- keep grass above forest:wood and leisure:park! -->
+        <!-- http://wiki.openstreetmap.org/wiki/Proposed_features/conservation,
+                often serves as background for leisure=nature_reserve -->
+		<!-- grass ist irgend ein Gugus, den es z.B. am Grünenbergpass gibt -->		
+        <m k="landuse" v="grass">
+            <area mesh="true" fill="#c4deab"/>
+        </m>
+
+        <m k="leisure" v="garden">
+            <area mesh="true" fill="#cce0b8"/>
+        </m>
+
+        <m k="landuse" v="reservoir|basin">
+            <area use="water"/>
+        </m>
+        <!-- End landuse, natural, leisure, tourism, amenity areas -->
+    </m> <!--- End of closed ways -->
+
+    <!-- Waterways (rivers, streams, etc.) -->
+    <m e="way" k="waterway">
+        <m v="ditch|drain" zoom-min="14">
+            <line use="water" width="0.2"/>
+        </m>
+        <m v="stream" zoom-min="13">
+            <line use="water" width="0.4"/>
+        </m>
+        <m v="canal">
+            <line use="river" width="-0.3"/>
+        </m>
+        <m v="river">
+            <m zoom-min="12">
+                <line use="river" width="0.5"/>
+            </m>
+            <m zoom-min="10">
+                <line use="water" width="0.3"/>
+            </m>
+            <m zoom-min="8">
+                <line use="water" width="0.1"/>
+            </m>
+        </m>
+        <m v="riverbank|dock">
+            <!-- Using mesh=true for areas causes problems below ZL 12 -->
+            <!-- Using just lines at lower ZL is not a good solution (big rivers look bad) -->
+            <area use="water" mesh="false"/>
+        </m>
+        <m v="weir">
+            <line stroke="#000088" use="fix"/>
+        </m>
+        <m v="dam" zoom-min="12">
+            <line stroke="#ababab" use="fix" width="0.2"/>
+        </m>
+        <m k="lock" v="yes|true">
+            <line stroke="#f8f8f8" use="fix" width="0.5"/>
+        </m>
+    </m>
+    <!-- Closed natural water features (e.g. lakes) -->
+    <m e="way">
+        <m closed="yes" k="natural" v="water">
+            <area use="water" />
+            <caption font-family="thin" area-size="0.2" fill="#000000" k="name" size="14"/>
+        </m>
+    </m>
+
+    <!-- partially transparent areas, draw later. these can overlap water and land -->
+    <m k="leisure" v="nature_reserve">
+        <area mesh="true" fill="#9988b8b3"/>
+    </m>
+    <m k="landuse" v="military">
+        <area mesh="true" fill="#99b89488"/>
+        <caption font-family="thin" area-size="0.2" fill="#000000" k="name" size="14"/>
+    </m>
+    <!-- Funi&Schmalspur (Magglingen = Funiculaire / Rothorn, Kleine Scheidegg=narrow_gauge:-) E53737 -->
+	<m e="way" k="railway" v="funicular|narrow_gauge"> 
+        <line stroke="#E53737" width="1.2"/>
+    </m>
+
+    <!-- Railway -->
+    <m e="way" k="railway">
+        <m v="station">
+            <area fill="#dbdbc9" stroke="#707070" stroke-width="0.3"/>
+        </m>
+        <!-- Railway bridge casings (TODO - needs work?) -->
+        <m zoom-min="14">
+            <m k="bridge" v="yes|true">
+                <m v="tram|subway|light_rail|narrow_gauge">
+                    <line cap="butt" fix="true" stroke="#777777" width="0.9"/>
+                </m>
+                <m v="rail">
+                    <line cap="butt" fix="true" stroke="#777777" width="0.9"/>
+                </m>
+            </m>
+        </m>
+        <!--- Rail: use a line pattern above zoom 13 -->
+        <m v="rail|turntable" zoom-min="14">
+            <line cap="butt" fix="true" stipple="10" stipple-stroke="#ffffff"
+                  stipple-width="0.8" stroke="#666666" width="2.0"/>
+        </m>
+        <m v="rail|turntable" zoom-max="13">
+            <line cap="butt" fix="true" stroke="#ddaa9988" width="1.0"/>
+        </m>
+        <m v="tram" zoom-min="15">
+            <line fix="true" stroke="#887766" width="1.0"/>
+        </m>
+        <m v="light_rail|subway|narrow_gauge" zoom-min="14">
+            <line stroke="#999999" width="0.25"/>
+        </m>
+        <!-- Other tag values such as disused, spur, abandoned, preserved... --> 
+        <m k="railway" v="~">
+            <line cap="butt" fix="true" stroke="#cccccc" width="0.6"/>
+        </m>
+    </m>
+
+    <!-- airport area features -->
+    <m e="way" k="aeroway" v="aerodrome|apron|helipad">
+        <area mesh="true" fill="#c7c7b1"/>
+        <caption font-family="thin" area-size="0.2" fill="#000000" k="name" size="14"/>
+    </m>
+    <m e="way" k="aeroway" v="terminal">
+        <area mesh="true" fill="#c2c180"/>
+    </m>
+
+    <!-- buildings -->
+	<!-- Modifiziert Dänu , hat die einzelstehenden Gebäude getroffen, wird aber von etwas anderem überschrieben ; rückgänig gemacht-->
+	<!-- Modifiziert Dänu , Das 3D Modell überschreibt die farbe. Gemäss ChatgPT läst sich das nicht ändern-->
+    <m e="way" k="building" v="*" zoom-min="17">
+        <area fill="#a29186" stroke="#958175" stroke-width="0.25"/>
+    </m>
+
+    <!-- elevation contours -->
+	<!-- Modifiziert Dänu (Farbe Text Höhenlinien vorher fill=#444444-->
+	<!-- vorsicht, wenn die Prio zu gross (5), dann überschreiben die Höhenlininen die Städenamen -->
+    <m e="way" k="natural" v="minor_contour_line" zoom-min="14">
+        <line stroke="#938945" width="0.35"/>
+    </m>
+    <m e="way" k="natural" v="major_contour_line" zoom-min="10">
+        <line stroke="#938945" width="0.65"/>
+        <text k="name" caption="true" size="12" priority="1" fill="#7F763B" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+    </m>
+
+    <!-- special roads -->
+
+    <!-- runway lines -->
+    <m e="way" k="aeroway" v="runway|taxiway">
+        <m k="*" v="*" zoom-min="10" zoom-max="12">
+            <line stroke="#a6a5a2" width="1.5"/>
+        </m>
+        <m k="*" v="*" zoom-min="13">
+            <line stroke="#a6a5a2" width="2.0"/>
+        </m>
+    </m>
+    <!-- piste (ski slopes) -->
+    <m e="way" k="piste" v="*">
+        <line stroke="#494c88" width="0.3"/>
+    </m>
+    <!-- aerialways (gondola, cablecar, chair-lift, etc.) -->
+	<!-- Dänu, rot -->
+    <m e="way" k="aerialway" v="*"> 
+        <line stroke="#E53737" width="1.2"/>
+    </m>
+	
+    <!-- bridleway (horses) -->
+    <m e="way" k="highway" v="bridleway">
+        <line use="path" stroke="#69b31b"/>
+    </m>
+
+    <!-- Cycling networks -->
+    <m e="way" select="first">
+        <m k="icn" v="yes" zoom-min="10">
+            <m k="bridge" v="yes|true">
+                <line stroke="#a2c851" cap="butt" width="4.2"/>
+            </m>
+            <m k="bridge" v="~">
+                <line stroke="#a2c851" width="4.2"/>
+            </m>
+        </m>
+        <m e="way" k="ncn" v="yes" zoom-min="11">
+            <m k="bridge" v="yes|true">
+                <line stroke="#d1837b" cap="butt" width="4.2"/>
+            </m>
+            <m k="bridge" v="~">
+                <line stroke="#d1837b" width="4.2"/>
+            </m>
+        </m>
+        <m k="rcn" v="yes" zoom-min="12">
+            <m k="bridge" v="yes|true">
+                <line stroke="#b77bb5" cap="butt" width="4.2"/>
+            </m>
+            <m k="bridge" v="~">
+                <line stroke="#b77bb5" width="4.2"/>
+            </m>
+        </m>
+        <m k="lcn" v="yes" zoom-min="13">
+            <m k="bridge" v="yes|true">
+                <line stroke="#00aaaa" cap="butt" width="4.2"/>
+            </m>
+            <m k="bridge" v="~">
+                <line stroke="#00aaaa" width="4.2"/>
+            </m>
+        </m>			
+    </m>
+
+    <!-- footway (separate bicycle-allowed from other)-->
+    <m e="way" k="highway" v="footway">
+        <m select="first">
+            <m k="bicycle" v="yes|designated">
+                <line use="cycling_path"/>
+            </m>
+            <m k="footway" v="sidewalk" zoom-min="15">
+                <!-- Not sure if there is a better way to not display sidewalks -->
+                <line width="0.0"/>
+            </m>
+            <m k="~" v="~">
+                <line use="path"/>
+            </m>
+        </m>
+    </m>
+
+    <!-- service roads - separate parking aisle and driveway from other service roads -->
+	<!-- by Dänu Quartierstrasse z.B. Hausmattstrasse; Originalfarbe:#f2f5ed) -->
+    <m e="way" k="highway" v="service">
+		<!-- by Dänu Quartierstrasse z.B. Hausmattstrasse; Originalfarbe:#f2f5ed) -->
+        <m k="service" v="driveway" zoom-min="17">
+            <line stroke="#ffffff" cap="round" width="0.8"/>
+        </m>
+		<!-- by Dänu Parkplätze z.B. Moser-Platz, Turnhallenstrasse; Originalfarbe:#f2f5ed) -->
+        <m k="service" v="parking_aisle" zoom-min="14">
+            <line stroke="#f2f5ed" cap="round" width="0.6"/>
+        </m>
+        <m k="service" v="alley" zoom-min="14">
+            <line stroke="#f2f5ed" cap="round" width="0.85"/>
+        </m>
+		<!-- by Dänu Service z.B. Coop oder Moser Baer; Originalfarbe:#f2f5ed) -->
+        <m k="service" v="~" zoom-min="14">
+            <line stroke="#f2f5ed" cap="round" width="0.85"/>
+        </m>
+    </m>
+
+    <!-- pedestrian highways -->
+    <m e="way" k="highway" v="pedestrian">
+        <m zoom-min="14">
+            <line stroke="#f2f5ed" cap="round" width="0.9"/>
+            <text use="road_label" size="12" priority="15"/>
+        </m>
+    </m>
+
+    <!-- road casings (separate treatment for unpaved, cycleways, cyclelanes) -->
+    <!-- TODO - add dashed casing for tunnels -->
+
+    <m e="way" k="highway" v="path">
+        <!-- use an unpaved casing for mtb or unpaved with bicycle designation -->
+        <m select="first">
+            <m k="cycleway|mtb:scale|mtb:uphill|mtb:imba" v="*">
+                <line use="velo_weg"/>
+            </m>
+			<!-- Dänu remarked, Dupplette z.B. Färnstu -->
+            <!-- <m k="bicycle" v="yes|designated"> -->
+                <!-- <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel"> -->
+                <!--     <line use="bycicle_unpaved"/> -->
+                <!-- </m> -->
+            <!-- </m> -->
+        </m>
+    </m>
+    <m e="way" k="highway" v="cycleway">
+        <!-- differentiate unpaved from paved -->
+        <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel">
+            <line use="unpaved_casing"/>
+        </m>
+        <m k="surface" v="~">
+            <line use="paved_cycleway_casing" width="1.2"/>
+        </m>
+    </m>
+    <m e="way" k="highway" v="residential|living_street">
+		<!-- By Dänu: Verursacht verfärbung als MTB Trail obschon Quartierstrasse; Darum remarked und noch ca. 5 weitere Einträge mit unpaved gelöscht -->
+        <!-- <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel" zoom-min="13"> -->
+        <!--     <line use="unpaved_casing" width="2.2"/> -->
+        <!-- </m> -->
+        <m k="surface" v="~">
+            <m k="cycleway" v="*" zoom-min="13">
+                <m k="bridge" v="yes|true">
+                    <line use="paved_cycleway_casing" cap="butt" width="1.9"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line use="paved_cycleway_casing" width="1.9"/>
+                </m>
+            </m>
+            <m k="cycleway" v="~" zoom-min="15">
+                <m k="bridge" v="yes|true">
+                    <line stroke="#707070" cap="butt" width="1.5"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line stroke="#707070" cap="round" width="1.5"/>
+                </m>
+            </m>
+        </m>
+    </m>
+    <m e="way" k="highway" v="unclassified|road">
+        <m k="surface" v="~">
+            <m k="cycleway" v="*" zoom-min="12">
+                <m k="bridge" v="yes|true">
+                    <line use="paved_cycleway_casing" cap="butt" width="2.1"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line use="paved_cycleway_casing" width="2.1"/>
+                </m>
+            </m>
+            <m k="cycleway" v="~" zoom-min="14">
+                <m k="bridge" v="yes|true">
+                    <line stroke="#707070" cap="butt" width="1.7"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line stroke="#707070" cap="round" width="1.7"/>
+                </m>
+            </m>
+        </m>
+    </m>
+    <m e="way" k="highway" v="tertiary|tertiary_link">
+        <m k="surface" v="~">
+            <m k="cycleway" v="*" zoom-min="12">
+                <m k="bridge" v="yes|true">
+                    <line use="paved_cycleway_casing" cap="butt" width="2.3"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line use="paved_cycleway_casing" width="2.3"/>
+                </m>
+            </m>
+            <m k="cycleway" v="~" zoom-min="14">
+                <m k="bridge" v="yes|true">
+                    <line stroke="#707070" cap="butt" width="1.9"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line stroke="#707070" cap="round" width="1.9"/>
+                </m>
+            </m>
+        </m>
+    </m>
+    <m e="way" k="highway" v="secondary|secondary_link">
+        <m k="surface" v="~">
+            <m k="cycleway" v="*" zoom-min="10">
+                <m k="bridge" v="yes|true">
+                    <line use="paved_cycleway_casing" cap="butt" width="2.5"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line use="paved_cycleway_casing" width="2.5"/>
+                </m>
+            </m>
+            <m k="cycleway" v="~" zoom-min="13">
+                <m k="bridge" v="yes|true">
+                    <line stroke="#707070" cap="butt" width="2.0"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line stroke="#707070" cap="round" width="2.0"/>
+                </m>
+            </m>
+        </m>
+    </m>
+    <m e="way" k="highway" v="primary|primary_link">
+        <m k="surface" v="~">
+            <m k="cycleway" v="*" zoom-min="10">
+                <m k="bridge" v="yes|true">
+                    <line use="paved_cycleway_casing" cap="butt" width="2.5"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line use="paved_cycleway_casing" width="2.5"/>
+                </m>
+            </m>
+            <m k="cycleway" v="~" zoom-min="12">
+                <m k="bridge" v="yes|true">
+                    <line stroke="#707070" cap="butt" width="2.3"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line stroke="#707070" cap="round" width="2.3"/>
+                </m>
+            </m>
+        </m>
+    </m>
+
+    <!-- motorways and trunk roads - no casing -->
+    <m e="way" k="highway" v="motorway|motorway_link|trunk|trunk_link">
+        <line stroke="#dbb042" width="1.6"/>
+        <text use="road_label" size="13" priority="14"/>
+    </m>
+
+    <!-- highway=track - mostly agricultural and farm roads -->
+    <!-- TODO - highlight any with explicit bicycleaccess? -->
+    <m e="way" k="highway" v="track">
+        <line use="feldweg"/>
+    </m>
+
+    <!-- inner fill and labels for roads -->
+
+    <!-- TODO - check for mtb tags -->
+    <m e="way" k="highway" v="residential|living_street">
+        <m zoom-min="15">
+            <line stroke="#ffffff" cap="round" width="1.2"/>
+        </m>
+        <m zoom-max="14" zoom-min="13">
+            <line stroke="#ffffff" cap="round" width="1.0"/>
+        </m>
+        <m zoom-min="13">
+            <text use="road_label" size="13" priority="8"/>
+        </m>
+    </m>
+    <m e="way" k="highway" v="unclassified|road">
+        <m zoom-min="15">
+            <line stroke="#ffffff" cap="round" width="1.4"/>
+        </m>
+        <m zoom-max="14" zoom-min="12">
+            <line stroke="#ffffff" cap="round" width="1.2"/>
+        </m>
+        <m zoom-min="12">
+            <text use="road_label" size="13" priority="9"/>
+        </m>
+    </m>
+    <m e="way" k="highway" v="tertiary|tertiary_link">
+        <m zoom-min="14">
+            <line stroke="#ffffff" cap="round" width="1.6"/>
+        </m>
+        <m zoom-max="13" zoom-min="11">
+            <line stroke="#ffffff" cap="round" width="1.4"/>
+        </m>
+        <m zoom-min="11">
+            <text use="road_label" size="13" priority="10"/>
+        </m>
+    </m>
+    <m e="way" k="highway" v="secondary|secondary_link">
+        <m zoom-min="13">
+            <line stroke="#ffffff" cap="round" width="1.7"/>
+        </m>
+        <m zoom-max="12" zoom-min="10">
+            <line stroke="#ffffff" cap="round" width="1.5"/>
+        </m>
+        <m zoom-min="10">
+            <text use="road_label" size="13" priority="11"/>
+        </m>
+    </m>
+    <m e="way" k="highway" v="primary|primary_link">
+        <m zoom-min="12">
+            <line stroke="#ffffff" cap="round" width="1.9"/>
+        </m>
+        <m zoom-max="11" zoom-min="8">
+            <line stroke="#ffffff" cap="round" width="1.7"/>
+        </m>
+        <m zoom-min="8">
+            <text use="road_label" size="13" priority="12"/>
+        </m>
+    </m>
+
+    <!-- path - allows bicycles by default. Yellow dash indicates mountain bike preferred, white dash -->
+    <!--     indicates bicycle access but no special mountain bike information -->
+    <m e="way" k="highway" v="path">
+        <m select="first">
+            <!-- TODO - different treatment based on difficulty? -->
+			<!-- gelb von Hammerhead, nicht gesehen auf Karte gesehen --> 
+            <m k="mtb:scale|mtb:uphill|mtb:imba" v="*">
+                <line stroke="#e9eb7c" cap="butt" dasharray="8,4" width="1.0"/>
+            </m>
+			<!-- Dänu rot eingefärbt, noch nie auf der Karte gesehen --> 
+            <m k="cycleway" v="*">
+                <line use="cycling_path_1"/>
+            </m>
+			<!-- diesen Trailgibt es in einzele Finale z.B. Bei Base Nato oder Chiesa Madonna/beim Rollercoaster -->
+			<!-- noch klären wie diese zustande kommen -->
+            <m k="bicycle" v="yes|designated">
+                <line use="mtb_trail"/>
+            </m>
+            <m k="~" v="~">
+                <line use="path"/>
+            </m>
+        </m>
+        <m zoom-min="14">
+            <text use="road_label" size="13" priority="7"/>
+        </m>
+    </m>
+    <!-- highway=cycleway indicates a separate way used for cycling -->
+    <m e="way" k="highway" v="cycleway">
+        <line use="cycling_path_2"/>
+        <m zoom-min="13">
+            <text use="road_label" fill="#222222" size="14" priority="6"/>
+        </m>
+    </m>
+
+    <!-- route=ferry -->
+    <m e="way" k="route" v="ferry">
+        <line use="ferry"/>
+        <m zoom-min="12">
+            <text use="road_label" fill="#222222" size="13" priority="9"/>
+        </m>
+    </m>
+
+    <!-- highway one-way markers -->
+    <m k="tunnel" v="~|false|no">
+        <m k="area" v="~|false|no">
+            <m k="highway">
+                <m k="oneway" v="yes|true" zoom-min="15">
+                    <lineSymbol src="file:/icons/oneway.svg" symbol-percent="125" repeat-gap="175"/>
+                </m>
+            </m>
+        </m>
+    </m>
+
+    <!-- /roads -->
+	<!-- emergency by Dänu (aus elevate.xml übernommen) -->
+	<m cat="emergency" e="any" k="*" v="*" zoom-min="9">
+		<m e="any" k="amenity" v="hospital" zoom-min="14">
+			<!-- <symbol id="s_hospital" priority="83" src="file:ele-res/s_hospital.svg" symbol-height="16" /> -->
+			<symbol id="s_hospital" priority="83" src="file:/icons-dan/hospital.svg" symbol-height="25" />
+			<m e="any" k="*" v="*" zoom-min="18">
+				<caption k="name" symbol-id="s_hospital" position="above" font-style="bold" font-size="10" fill="#DA0092" stroke="#E5FFFFFF" stroke-width="2" />
+			</m>
+		</m>
+	</m>
+	
+	<!-- restaurants by Dänu : es gibt aktuell keine Restaurants in der Karte Stand Okt. 2025 -->
+	<m cat="restaurants" e="any" k="*" v="*" zoom-min="9">
+		<m e="any" k="tourism" v="alpine_hut" zoom-min="14">
+			<m e="any" k="access|reservation" v="~">
+				<symbol id="s_restaurant" priority="69" src="file:ele-res/s_restaurant.svg" symbol-height="25" />
+				<caption k="name" symbol-id="s_restaurant" position="above" font-size="10" font-style="bold" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+				<caption k="ele" priority="-5" symbol-id="s_restaurant" position="below" font-size="10" font-style="bold" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+			</m>
+		</m>
+	</m>
+		
+	<!-- shops by Dänu (aus elevate.xml übernommen) -->
+	<m cat="shops" e="any" k="*" v="*" zoom-min="9">
+		<m e="any" k="shop" v="bakery" zoom-min="14">
+			<!-- <symbol id="s_bakery" priority="68" src="file:ele-res/s_bakery.svg" symbol-height="16" /> -->
+			<symbol id="s_bakery" priority="68" src="file:/icons-dan/croissant.svg" symbol-height="25" />
+			<m e="any" k="*" v="*" zoom-min="18">
+				<caption k="name" symbol-id="s_bakery" position="above" font-style="bold" font-size="10" fill="#AC39AC" stroke="#E5FFFFFF" stroke-width="2" />
+			</m>
+		</m>
+	</m>		
+    <!-- poi -->
+    <m e="node" k="amenity">
+        <m v="bank|atm" zoom-min="15">
+            <!-- <symbol id="bank" symbol-percent="125" src="file:/icons/bank-15-bg.svg"/> -->
+			<symbol id="bank" symbol-percent="125" src="file:/icons-dan/bank.svg"/>
+        </m>
+        <m v="beach" zoom-min="15">
+            <symbol id="beach" symbol-percent="125" src="file:/icons/beach-15-bg.svg"/>
+        </m>
+        <m v="grave_yard" zoom-min="15">
+            <symbol id="cemetery" symbol-percent="125" src="file:/icons/cemetery-15-bg.svg"/>
+        </m>
+        <m v="university" zoom-min="15">
+            <symbol id="college" symbol-percent="125" src="file:/icons/college-15-bg.svg"/>
+        </m>
+        <m v="convenience" zoom-min="15">
+            <symbol id="convenience" symbol-percent="125" src="file:/icons/convenience-15-bg.svg"/>
+        </m>
+        <m e="node" k="tourism" v="information" zoom-min="15">
+            <symbol id="information" symbol-percent="125" src="file:/icons/information-15-bg.svg"/>
+        </m>
+        <m v="library" zoom-min="15">
+            <symbol id="library" symbol-percent="125" src="file:/icons/library-15-bg.svg"/>
+            <text use="poi_label"/>
+        </m>
+        <!-- <m e="node" k="amenity" v="park" zoom-min="15">
+            <symbol id="park" symbol-percent="125" src="file:/icons/park-15-bg.svg" />
+        </m> -->
+        <!-- <m e="node" k="amenity" v="parking" zoom-min="13">
+            <symbol id="parking" symbol-percent="125" src="file:/icons/parking-15-bg.svg" />
+        </m> -->
+        <m v="pharmacy" zoom-min="15">
+            <symbol id="pharmacy" symbol-percent="125" src="file:/icons-dan/pharmacy.svg"/>
+            <text use="poi_label"/>
+        </m>
+        <m v="police" zoom-min="15">
+            <symbol id="police" symbol-percent="125" src="file:/icons/police-15-bg.svg"/>
+        </m>
+        <m v="toilets" zoom-min="15">
+            <!-- <symbol id="toilet" symbol-percent="125" src="file:/icons/toilet-15-bg.svg"/> -->
+			<symbol id="toilet" symbol-percent="125" src="file:/icons-dan/toilet.svg"/>
+            <text use="poi_label"/>
+        </m>
+        <m v="drinking_water" zoom-min="15">
+         <!--    <symbol id="drinking-water" symbol-percent="125" src="file:/icons/drinking-water-15-bg.svg"/> -->
+		    <symbol id="drinking-water" symbol-percent="125" src="file:/icons-dan/water.svg"/>
+            <text use="poi_label"/>
+        </m>
+        <m v="cafe" zoom-min="15">
+            <!-- <symbol id="cafe" symbol-percent="125" src="file:/icons/cafe-15-bg.svg"/> -->
+			<symbol id="cafe" symbol-percent="125" src="file:/icons-dan/coffee.svg"/>
+            <text use="poi_label"/>
+        </m>
+        <m v="bicycle_rental" zoom-min="15">
+		    <!-- <symbol id="bicycle" symbol-percent="125" src="file:/icons/bicycle-15-bg.svg"/> -->
+            <symbol id="bicycle" symbol-percent="160" src="file:/icons-dan/bike-shop.svg"/>
+        </m>
+		<m v="bakery" zoom-min="15">
+            <symbol id="bakery" symbol-percent="125" src="file:/icons-dan/croissant.svg"/>
+        </m>
+    </m>
+    <m e="node" k="tourism">
+        <m v="picnic_site" zoom-min="15">
+            <symbol id="picnic-site" symbol-percent="125" src="file:/icons/picnic-site-15-bg.svg"/>
+        </m>
+        <m v="camp_site" zoom-min="15">
+            <symbol id="campsite" symbol-percent="125" src="file:/icons/campsite-15-bg.svg"/>
+            <text use="poi_label"/>
+        </m>
+    </m>
+    <m e="node" k="shop">
+        <m v="supermarket" zoom-min="15">
+            <!-- <symbol id="grocery" symbol-percent="125" src="file:/icons/grocery-15-bg.svg"/> -->
+			<symbol id="grocery" symbol-percent="125" src="file:/icons-dan/supermarket.svg"/>
+        </m>
+        <m v="bicycle" zoom-min="15">
+		<!-- <symbol id="bicycle" symbol-percent="125" src="file:/icons/bicycle-15-bg.svg"/> -->
+            <symbol id="bicycle" symbol-percent="160" src="file:/icons-dan/bike-shop.svg"/>
+            <text use="poi_label"/>
+        </m>
+    </m>
+
+    <!-- place labels -->
+	<!-- modifiziert by Dänu: Städenamen nicht kursiv; So, dass Bern in jeder Zoomstufe angezeigt wird; Text etwas grösser; Schwarz -->
+	<!-- ACHTUNG: je höher die Zahl der Priorität, desto gewichtiger ist die Anzeige. Also Städte hohe Prio, Quartiere tiefe Prio -->
+	<!-- Das mit den Prioritäten müsste mal einer den Entwicklern sagen :-) -->
+    <m e="node" k="place">
+		<m v="city" zoom-min="6">
+            <caption style="bold" fill="#000000" k="name" priority="70" size="20"
+                    font-family="thin" stroke="#ffffff" stroke-width="2.0" />
+        </m>
+		<m v="town" zoom-min="7">
+            <caption style="bold" fill="#000000" k="name" priority="50" size="18"
+                    font-family="thin" stroke="#ffffff" stroke-width="2.0" />
+        </m>
+		<m v="village" zoom-min="9">
+            <caption style="bold" fill="#000000" k="name" priority="40" size="17"
+                    font-family="thin" stroke="#ffffff" stroke-width="2.0" />
+        </m>
+		<m v="hamlet" zoom-min="11">
+            <caption style="bold" fill="#404040" k="name" priority="30" size="16"
+                    font-family="thin" stroke="#ffffff" stroke-width="2.0" />
+        </m>
+		<m v="suburb|neighborhood" zoom-min="12">
+            <caption style="bold" fill="#404040" k="name" priority="20" size="15"
+                    font-family="thin" stroke="#ffffff" stroke-width="2.0" />
+        </m>
+		<m v="locality" zoom-min="13">
+            <caption style="bold_italic" fill="#606060" k="name" priority="10" size="14"
+                    font-family="thin" stroke="#ffffff" stroke-width="2.0" />
+        </m>     
+		<m v="island" zoom-min="10">
+            <caption style="bold" fill="#404040" k="name" priority="20" size="16"
+                    font-family="thin" stroke="#ffffff" stroke-width="2.0" />
+        </m>		
+    </m>
+	
+    <!-- /place -->
+	
+
+</rendertheme>
