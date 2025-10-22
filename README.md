@@ -7,7 +7,8 @@ This custom map style for the Hammerhead Karoo improves clarity, visibility, and
 
 1. Copy the `icons-dan` folder and the `offline_v14.xml` file to the root directory of your Karoo device.
 
-> ⚠️ **Note:** Some Karoo software updates may require a different filename for the style XML file.  
+> [!WARNING]
+> Some Karoo software updates may require a different filename for the style XML file.  
 > After copying the file, make sure to **rename it according to your Karoo software version**.  
 > For example:
 > - Software version **14** → `offline_v14.xml`
