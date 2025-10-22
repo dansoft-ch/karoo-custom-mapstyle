@@ -1,7 +1,17 @@
 # Karoo Map Style – MTB Optimized
 
 I've noticed that the default map on the Karoo has various inconsistencies and bugs. It's simply not ideal for mountain biking. That's why I've created this improved version.
-This custom map style for the Hammerhead Karoo improves clarity, visibility, and usability for mountain biking.  
+This custom map style for the Hammerhead Karoo improves clarity, visibility, and usability for mountain biking.
+
+## Usage
+
+1. Copy the `icons-dan` folder and the `offline_v14.xml` file to the root directory of your Karoo device.
+
+> ⚠️ **Note:** Some Karoo software updates may require a different filename for the style XML file.  
+> After copying the file, make sure to **rename it according to your Karoo software version**.  
+> For example:
+> - Software version **14** → `offline_v14.xml`
+> - Software version **15** → `offline_v15.xml`
 
 ## Improvements
 
