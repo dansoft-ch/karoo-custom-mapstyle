@@ -73,3 +73,5 @@ This custom map style for the Hammerhead Karoo improves clarity, visibility, and
 
 ## Inspiration
 - [www.openandromaps.org](https://www.openandromaps.org/)
+- [SVG-Editor](https://freesvgeditor.com/en/svg-editor-online)
+- [Symbols](https://www.emoji.family/emojis/symbols/potable-water)
