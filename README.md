@@ -9,7 +9,7 @@ This custom map style for the Hammerhead Karoo improves clarity, visibility, and
 2. Reopen the map view.
 3. Enjoy. 
 
-> [!WARNING]
+> [!TIP]
 > Some Karoo software updates may require a different filename for the style XML file.  
 > After copying the file, make sure to **rename it according to your Karoo software version**.  
 > For example:
