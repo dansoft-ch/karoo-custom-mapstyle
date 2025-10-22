@@ -42,8 +42,7 @@ This custom map style for the Hammerhead Karoo improves clarity, visibility, and
 - Paved residential streets now appear more clearly, helping with orientation.
 - Contour lines have been toned down to a subtle brown – inspired by Locus Map and Swisstopo.
 
-<img width="1000" height="800" alt="Icons" src="https://github.com/user-attachments/assets/bf762e7a-b638-4574-9387-0c1434afd8f9" />
-
+<img width="1000" height="800" alt="Quartierstrasse" src="https://github.com/user-attachments/assets/1bdbd491-38af-402c-b3bc-f4c1a74e9752" />
 
 ## Bug Fixes
 
