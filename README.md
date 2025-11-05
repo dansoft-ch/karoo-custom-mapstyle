@@ -8,7 +8,7 @@ This custom map style for the Hammerhead Karoo improves clarity, visibility, and
 1. Connect via USB.
 2. [Enable Developer Options](https://support.hammerhead.io/hc/en-us/articles/30696553134363-Karoo-Enabling-Developer-Options)
 3. Enable File Transfer under Settings -> Developer Options -> Default USB Configuration -> File Transfer.
-4. Copy the `icons-dan` folder and the `offline_v14.xml` file to the root directory of your Karoo device.
+4. Copy the folders `icons-dan` and `patterns` as well as the mapstyle file `offline_v14.xml` to the root directory of your Karoo device.
 5. Reopen the map view.
 6. Enjoy. 
 
@@ -74,7 +74,26 @@ This custom map style for the Hammerhead Karoo improves clarity, visibility, and
 
 <img width="800" height="640" alt="Hospital" src="https://github.com/user-attachments/assets/de25cd99-7e67-469e-9fb8-b8c057e7aee8" />
 
+## Further improvements of the map
+- Added patterns for scree, vineyard, orchard, wetland
+<img height="640" alt="Geroell" src="https://github.com/user-attachments/assets/cf607371-73e8-4737-9f17-cb3e68fb2da2" />
+<img height="640" alt="Vineyard" src="https://github.com/user-attachments/assets/56bc1549-4a01-4101-bba6-0081743e2627" />
+
+- Added pattern for scrub (green dots; selfmade like swisstopo:-) and quarry
+<img height="640" alt="Gebuesch" src="https://github.com/user-attachments/assets/27d30d66-bf81-4418-9f4b-d230b118deb4" />
+<img height="640" alt="Gebuesch" src="https://github.com/user-attachments/assets/b180dd98-7fb2-4e8d-bff0-51892912d557" />
+
+- Addes platform (at Railwaystations) in blue to find easy where to get in the train at foreign stations
+<img height="640" alt="railway-plattform" src="https://github.com/user-attachments/assets/7e5ea794-9c5a-4b46-b475-a5f496a96a2f" />
+  
+- Better visability for natural reserves (nature_reserve|protected_area|national_park)
+<img height="640" alt="natural" src="https://github.com/user-attachments/assets/ed57f235-3c19-4de2-a77b-67f37b97444c" />
+ 
+
+
 ## Inspiration
 - [www.openandromaps.org](https://www.openandromaps.org/)
 - [SVG-Editor](https://freesvgeditor.com/en/svg-editor-online)
 - [Symbols](https://www.emoji.family/emojis/symbols/potable-water)
+- [Freizeitkarte](https://www.freizeitkarte-osm.de/android/de/index.html)
+  
