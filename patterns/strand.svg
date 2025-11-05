@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="580" width="580" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <title>strand</title>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>strand</dc:title>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <path fill="#fff0a7" d="m0 0v580h580v-580z" fill-rule="evenodd"/>
+ <g transform="translate(9.0625)" stroke="#e6cb42" stroke-width="18.125" fill="none">
+  <path d="m0 18.125v18.125"/>
+  <path d="m0 126.88v18.12"/>
+  <path d="m36.25 36.25v18.125"/>
+  <path d="m36.25 72.5v18.125"/>
+  <path d="m72.5 90.625v18.125"/>
+  <path d="m90.625 126.88v36.245"/>
+  <path d="m36.25 181.25v18.125"/>
+  <path d="m18.125 235.62v18.125"/>
+  <path d="m72.5 253.75v18.125"/>
+  <path d="m54.375 362.5v18.125"/>
+  <path d="m18.125 362.5v18.125"/>
+  <path d="m90.625 398.75v18.125"/>
+  <path d="m72.5 453.12v18.125"/>
+  <path d="m18.125 525.62v18.125"/>
+  <path d="m0 561.88v18.12"/>
+  <path d="m90.625 525.62v18.125"/>
+  <path d="m181.25 507.5v18.125"/>
+  <path d="m235.62 525.62v18.125"/>
+  <path d="m271.88 561.88v18.125"/>
+  <path d="m344.38 489.38-0.005 18.12"/>
+  <path d="m290 489.38v18.125"/>
+  <path d="m344.38 435v18.125"/>
+  <path d="m217.5 453.12v18.125"/>
+  <path d="m199.38 380.62v18.125"/>
+  <path d="m145 380.62v18.125"/>
+  <path d="m145 326.25v18.125"/>
+  <path d="m126.88 290v18.125"/>
+  <path d="m253.75 290v18.125"/>
+  <path d="m253.75 326.25v36.25"/>
+  <path d="m344.38 326.25v18.125"/>
+  <path d="m326.25 380.62v18.125"/>
+  <path d="m308.12 253.75v36.25"/>
+  <path d="m326.25 199.38v36.25"/>
+  <path d="m290 217.5v18.125"/>
+  <path d="m235.62 235.62v18.125"/>
+  <path d="m290 163.12v18.12"/>
+  <path d="m253.75 163.12v18.125"/>
+  <path d="m181.25 163.12v18.125"/>
+  <path d="m308.12 108.75v18.125"/>
+  <path d="m253.75 108.75v18.125"/>
+  <path d="m145 145v18.125"/>
+  <path d="m126.88 126.88v18.125"/>
+  <path d="m271.88 72.5v18.125"/>
+  <path d="m235.62 54.375v18.125"/>
+  <path d="m217.5 36.25v18.125"/>
+  <path d="m163.12 36.25v18.125"/>
+  <path d="m163.12 72.5v18.125"/>
+  <path d="m108.75 54.375v18.125"/>
+  <path d="m145 0v18.125"/>
+  <path d="m181.25 0v18.125"/>
+  <path d="m308.12 18.125v18.125"/>
+  <path d="m326.25 36.25v18.125"/>
+  <path d="m362.5 0v36.25"/>
+  <path d="m416.88 36.25v18.125"/>
+  <path d="m471.25 36.25v18.125"/>
+  <path d="m525.62 36.25v18.125"/>
+  <path d="m543.75 54.375v18.125"/>
+  <path d="m525.62 108.75v18.125"/>
+  <path d="m453.12 108.75v18.125"/>
+  <path d="m398.75 72.5v18.125"/>
+  <path d="m398.75 108.75v18.125"/>
+  <path d="m489.38 145-0.005 18.125"/>
+  <path d="m543.75 145v18.125"/>
+  <path d="m525.62 253.75v18.125"/>
+  <path d="m471.25 217.5v18.125"/>
+  <path d="m435 235.62v18.125"/>
+  <path d="m507.5 290v18.125"/>
+  <path d="m543.75 344.38v18.12"/>
+  <path d="m416.88 362.5 0.005 18.125"/>
+  <path d="m362.5 362.5v18.125"/>
+  <path d="m507.5 380.62v18.125"/>
+  <path d="m453.12 416.88v18.125"/>
+  <path d="m398.75 435v18.125"/>
+  <path d="m416.88 453.12v18.125"/>
+  <path d="m453.12 471.25v18.125"/>
+  <path d="m507.5 453.12v18.125"/>
+  <path d="m543.75 416.88v36.25"/>
+  <path d="m543.75 471.25v18.125"/>
+  <path d="m489.38 507.5v18.125"/>
+  <path d="m380.62 561.88v18.12"/>
+  <path d="m525.62 543.75v18.125"/>
+  <path d="m561.88 543.75v18.125"/>
+ </g>
+ <g transform="translate(0,9.0625)" stroke="#e6cb42" stroke-width="18.125" fill="none">
+  <path d="m199.38 108.75h36.25"/>
+  <path d="m344.38 90.625h36.25"/>
+  <path d="m181.25 199.38h36.25"/>
+  <path d="m362.5 199.38h36.25"/>
+  <path d="m453.12 344.38h36.25"/>
+  <path d="m181.25 416.88h36.25"/>
+  <path d="m54.375 416.88h36.25"/>
+  <path d="m416.88 525.62h36.25"/>
+ </g>
+</svg>

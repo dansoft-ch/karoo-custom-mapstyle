@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="580" width="580" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <title>mischwald</title>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>mischwald</dc:title>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <path fill="#97cb5f" d="m0 0h580v580h-580z"/>
+ <g stroke-linejoin="round" stroke="#6eba68" stroke-linecap="round" stroke-width="18.125" fill="none">
+  <path d="m190.31 208.44v-54.375h-36.25l36.25-108.75 36.25 108.75h-36.25z"/>
+  <path d="m99.688 208.44v-72.5c18.125 0 36.25-18.125 36.25-45.312 0-27.188-18.125-45.312-36.25-45.312s-36.25 18.125-36.25 45.312c0 27.188 18.125 45.312 36.25 45.312z"/>
+  <path d="m462.19 498.56v-54.375h-36.25l36.25-108.75 36.25 108.75h-36.25z"/>
+  <path d="m371.56 498.56v-72.5c18.125 0 36.25-18.125 36.25-45.312 0-27.188-18.125-45.312-36.25-45.312s-36.25 18.125-36.25 45.312c0 27.188 18.125 45.312 36.25 45.312z"/>
+ </g>
+</svg>

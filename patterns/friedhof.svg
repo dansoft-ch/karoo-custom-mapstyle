@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="580" width="580" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <title>friedhof</title>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>friedhof</dc:title>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <path fill="#b0d490" d="m0 0v580h580v-580z" fill-rule="evenodd"/>
+ <g fill="#8ba825" fill-rule="evenodd">
+  <path d="m0 389.69c0-7.6461 2.057-9.0625 9.0625-9.0625h9.0625v-54.375c0-18.14 9.063-36.26 27.187-36.26 18.126 0 27.188 18.12 27.188 36.25v54.375h9.0625c7.437 0 9.0625 2.182 9.0625 9.0625v9.0625h-90.625z"/>
+  <path d="m290 389.69c0-7.6461 2.057-9.0625 9.0625-9.0625h9.0625v-54.375c0-18.125 9.0625-36.25 27.188-36.25 18.125 0 27.188 18.125 27.188 36.25v54.375h9.0625c7.437 0 9.0625 2.182 9.0625 9.0625v9.0625h-90.625z"/>
+  <path d="m0 99.688c0-7.647 2.057-9.063 9.0625-9.063h9.0625v-54.375c0-18.125 9.063-36.25 27.187-36.25 18.126 0 27.188 18.125 27.188 36.25v54.375h9.0625c7.437 0 9.0625 2.182 9.0625 9.0625v9.0625h-90.625z"/>
+  <path d="m290 99.688c0-7.6461 2.057-9.0625 9.0625-9.0625h9.0625v-54.375c0-18.126 9.07-36.251 27.19-36.251 18.13 0 27.19 18.125 27.19 36.25v54.375h9.0625c7.437 0 9.0625 2.182 9.0625 9.0625v9.0625h-90.625z"/>
+ </g>
+</svg>

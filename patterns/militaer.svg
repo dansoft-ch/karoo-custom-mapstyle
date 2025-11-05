@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="580" width="580" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <title>militaer</title>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>militaer</dc:title>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g stroke="#ff9696" stroke-linecap="square" stroke-width="18.125" fill="none">
+  <path d="m561.88 0-561.88 561.88"/>
+  <path d="m580 181.25-398.75 398.75"/>
+  <path d="m580 380.62-199.38 199.38"/>
+  <path d="m380.62 0-380.62 380.62"/>
+  <path d="m181.25 0-181.25 181.25"/>
+  <path d="m580 561.88-18.12 18.12"/>
+ </g>
+</svg>
