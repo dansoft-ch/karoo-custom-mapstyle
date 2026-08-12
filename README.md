@@ -16,8 +16,9 @@ This custom map style for the Hammerhead Karoo improves clarity, visibility, and
 > Some Karoo software updates may require a different filename for the style XML file.  
 > After copying the file, make sure to **rename it according to your Karoo software version**.  
 > For example:
-> - Software version **14** → `offline_v14.xml`
-> - Software version **15** → `offline_v15.xml`
+> - Software version **1.4** → `offline_v14.xml`
+> - Software version **1.5** → `offline_v15.xml`
+> - Software version **1.64** → `mtb_v2.xml`
 
 ## Improvements
 
