@@ -70,8 +70,7 @@ The latest update (1.613) on my Karoo2 still needs offline_v15.xml. While K3 (1.
   - Trails are now all shown in different colors (green=easy, blue=intermediate, read=advanced), instead of mixed styles (brown-white, white dashed).
   - Paved sections that were temporarily shown in yellow, green, blue, or brown outlines have been cleaned up for consistency.
 
-<img width="420" height="699" alt="Trail-colored" src="https://github.com/user-attachments/assets/0d27d86e-ba1a-4434-9b7f-bc6e9b67d599" />
-
+<img width="1000" height="800" alt="Trails_k" src="https://github.com/user-attachments/assets/fa4f4d20-5ece-4384-87ec-80bf79149d03" />
 
 ### Hospitals Were Not Displayed
 - Hospitals are now properly shown on the map – helpful in emergencies.
