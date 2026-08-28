@@ -20,6 +20,8 @@ This custom map style for the Hammerhead Karoo improves clarity, visibility, and
 > - Software version **1.5** → `offline_v15.xml`
 > - Software version **1.64** → `mtb_v2.xml`
 
+The latest update (1.613) on my Karoo2 still needs offline_v15.xml. While K3 (1.64) needs mtb_v2.xml.
+
 ## Improvements
 
 ### More Visible Settlements
@@ -65,10 +67,11 @@ This custom map style for the Hammerhead Karoo improves clarity, visibility, and
 ### Confusion Between Trails and Unpaved Roads
 - Trails and unpaved roads were previously hard to distinguish.
   - Unpaved roads are now shown as solid dark gray lines.
-  - Trails are now all shown in the same color (**pink**), instead of mixed styles (brown-white, white dashed).
+  - Trails are now all shown in different colors (green=easy, blue=intermediate, read=advanced), instead of mixed styles (brown-white, white dashed).
   - Paved sections that were temporarily shown in yellow, green, blue, or brown outlines have been cleaned up for consistency.
 
-<img width="800" height="640" alt="Trails-Forrestroad" src="https://github.com/user-attachments/assets/5876db96-630c-4296-a155-2f8d56afa60a" />
+<img width="420" height="699" alt="Trail-colored" src="https://github.com/user-attachments/assets/0d27d86e-ba1a-4434-9b7f-bc6e9b67d599" />
+
 
 ### Hospitals Were Not Displayed
 - Hospitals are now properly shown on the map – helpful in emergencies.
